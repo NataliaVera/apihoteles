@@ -1,6 +1,6 @@
 import express from 'express';
-import { ControladorHabitacion } from '../Controllers/ControladorHabitacion.js';
-import { ControladorReserva } from '../Controllers/ControladorReserva.js';
+import { ControladorHabitacion } from '../controllers/ControladorHabitacion.js';
+import { ControladorReserva } from '../controllers/ControladorReserva.js';
 import {validateCreate} from '../validators/habitacion.js'
 import { validateCreateBooking } from '../validators/booking.js';
 
