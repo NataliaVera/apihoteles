@@ -4,8 +4,8 @@ import { ControladorReserva } from '../Controllers/ControladorReserva.js';
 import {validateCreate} from '../validators/habitacion.js'
 import { validateCreateBooking } from '../validators/booking.js';
 
-let controladorHabitacion = new ControladorHabitacion
-let controladorReserva = new ControladorReserva
+let controladorHabitacion = new ControladorHabitacion()
+let controladorReserva = new ControladorReserva()
 
 //Separar las rutas de la logica de negocio 
 
