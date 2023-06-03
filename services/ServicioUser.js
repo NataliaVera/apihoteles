@@ -1,4 +1,4 @@
-import { modeloUser } from "../models/modeloUser";
+import { modeloUser } from "../models/modeloUser.js";
 
 export class ServicioUser{
     
