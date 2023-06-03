@@ -1,11 +1,14 @@
 import express from 'express';
-import { ControladorHabitacion } from '../Controllers/ControladorHabitacion.js';
-import { ControladorReserva } from '../Controllers/ControladorReserva.js';
+import { ControladorHabitacion } from '../controllers/ControladorHabitacion.js';
+import { ControladorReserva } from '../controllers/ControladorReserva.js';
+import { ControladorUser } from '../controllers/ControladorUser.js';
 import {validateCreate} from '../validators/habitacion.js'
 import { validateCreateBooking } from '../validators/booking.js';
+import { validateCreateUser } from '../validators/user.js';
 
 let controladorHabitacion = new ControladorHabitacion
 let controladorReserva = new ControladorReserva
+let controladorUser = new ControladorUser
 
 //Separar las rutas de la logica de negocio 
 
@@ -22,3 +25,5 @@ rutas.get('/buscarreservas', controladorReserva.buscarReservas)
 rutas.get('/buscarreservaId/:idreserva', controladorReserva.buscarIdReserva)
 rutas.put('/actualizarreserva/:idreserva', controladorReserva.actualizarReserva)
 rutas.delete('/eliminarreserva/:idreserva', controladorReserva.eliminarReserva)
+
+rutas.post('/register', validateCreateUser, controladorUser.registerUser)
